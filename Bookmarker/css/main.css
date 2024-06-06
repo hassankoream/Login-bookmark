@@ -1,0 +1,226 @@
+/*  start global */
+:root {
+    --color-white: #fff;
+    --main-color: #F7ECDE;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+}
+
+a,
+span {
+    display: inline-block;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main-color {
+    background-color: var(--main-color);
+}
+::selection {
+    background-color: #df7152; /* Text color */
+
+}
+/*  end global */
+
+/* start header */
+.head-title h1::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    left: 0;
+    background-color: #fec260;
+    z-index: -1;
+    transition: all 0.5s;
+
+}
+
+
+
+.head-title h1{
+    font-family: "Pacifico";
+    font-weight: 400;
+  font-style: normal;
+}
+.head-title h1:hover::after {
+    height: 60%;
+}
+
+.dotted-line::before {
+    content: "";
+    /* Empty content */
+    display: block;
+    /* Make it a block element */
+    border-top: 2px dotted black;
+    /* Dotted line with thickness of 2px and black color */
+    width: 100%;
+    /* Full width */
+    margin: 10px 0;
+    /* Margin for spacing */
+}
+
+.myform h2 {
+    color: transparent;
+    background: linear-gradient(to right, #3EA55B 10%, #61a83e 50%, #B2AC49 60%);
+    background-clip: text;
+    background-size: 200% 100%;
+    animation: snakeAnimation 3s linear forwards;
+    font-family: "Righteous";
+}
+
+@keyframes snakeAnimation {
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+
+
+
+/* .element {
+    background-image: linear-gradient(to left, #3EA55B, #B2AC49);
+   
+} */
+
+
+.myform h2::before {
+    content: "\f02e";
+    /* Unicode for Font Awesome user icon */
+    font-family: "Font Awesome 5 Free";
+    /* Font Awesome family */
+    font-weight: 900;
+    /* Required for solid icons */
+    margin-right: 10px;
+    /* Space between icon and text */
+}
+
+.myform h2::after {
+    content: "\f02e";
+    /* Unicode for Font Awesome user icon */
+    font-family: "Font Awesome 5 Free";
+    /* Font Awesome family */
+    font-weight: 900;
+    /* Required for solid icons */
+    margin-left: 10px;
+    /* Space between icon and text */
+}
+
+
+
+.my-btn {
+    background-color: #d1512d;
+    color: #fff;
+
+}
+
+.my-btn:hover {
+    background-color: #bb4120;
+    color: #fff;
+}
+
+table {
+    background-color: #F8F9FA;
+}
+
+td,
+th {
+    border-bottom: 1px groove;
+    padding: 0.5rem;
+
+}
+
+td .btn-visit {
+    background-color: #B2AC49;
+    color: #fff;
+}
+
+td .btn-visit:hover {
+    background-color: #86822d;
+    color: #fff;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 .25rem rgba(254, 194, 96, 0.8);
+}
+
+/* end header */
+
+
+
+
+/* styles.css */
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.alert-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: start;
+    max-width: 500px;
+    width: 80%;
+}
+.icons-container .icons span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+}
+.fa-xmark{
+    cursor: pointer;
+}
+
+
+.home-icon{
+    padding: 5px;
+    background-color: #3EA55B;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    
+}
+.home-icon:hover{
+    color: var(--main-color);
+}
+.fa-bounce{
+    animation-iteration-count: 2;
+}
