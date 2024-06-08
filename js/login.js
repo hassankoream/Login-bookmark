@@ -15,7 +15,7 @@ loginBtn.addEventListener('click', function () {
 
 })
 
-
+// check if email and password match and get the name in storage to display on home.
 
 function signIn() {
     if (localStorage.getItem('myUsers') !== null) {
@@ -26,8 +26,7 @@ function signIn() {
                     localStorage.setItem('userName', users[i].name);
                     return ('Login successful');
                 } else {
-                    console.log(users[i]);
-                    return 'Invalid email or password';
+                    return ('Incorrect password');
                 }
             }
         }
